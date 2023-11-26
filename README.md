@@ -1,4 +1,4 @@
 - HTML
 - CSS
 - Java Script
-- Can you view [my partfolio](https://pages.github.com/).
+- Can you view [my partfolio](https://dagosrison.github.io/partfolio/).
