@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Калькулятор</title>
+<meta charset="UTF-8">
+<script src="script.js"></script>
+</head>
+<script type="function calculate() {
+var num1 = Number(document.getElementById("num1").value);
+var num2 = Number(document.getElementById("num2").value);
+var operation = document.getElementById("operation").value;
+var result;
+
+switch (operation) {
+case "+":
+result = sum(num1, num2);
+break;
+case "-":
+result = subtract(num1, num2);
+break;
+case 
+result = multiply(num1, num2);
+break;
+case /:
+result = divide(num1, num2);
+break;
+default:
+alert(Некорректная операция);
+return;
+}
+
+alert(Результат:  + result);
+}
+
+function sum(a, b) {
+return a + b;
+}
+
+function subtract(a, b) {
+return a - b;
+}
+
+function multiply(a, b) {
+return a * b;
+}
+
+function divide(a, b) {
+if (b === 0) {
+alert(Деление на ноль невозможно);
+return;
+}
+return a / b;
+}"></script>
+<h1>Калькулятор</h1>
+<form>
+<label for="num1">Первое число:</label>
+<input type="number" id="num1" name="num1">
+
+<label for="num2">Второе число:</label>
+<input type="number" id="num2" name="num2">
+
+<label for="operation">Операция:</label>
+<select id="operation" name="operation">
+<option value="+">Сложение</option>
+<option value="-">Вычитание</option>
+<option value="*">Умножение</option>
+<option value="/">Деление</option>
+</select>
+
+<input type="button" value="Рассчитать" onclick="calculate()">
+</form>
+</body>
+</html>
